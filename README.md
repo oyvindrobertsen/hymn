@@ -1,7 +1,7 @@
 # hymnous
 
 Web framework for the [hy](http://hylang.org) language.
-Conforms to WSGi standards.
+Conforms to WSGI standards.
 Written as a learning exercise and probably shouldn't be used for anything at all.
 
 # Installation

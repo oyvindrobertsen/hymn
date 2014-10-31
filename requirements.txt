@@ -1,4 +1,7 @@
 astor==0.4
 hy==0.10.1
+py==1.4.26
+pytest==2.6.4
 rply==0.7.2
+test-pkg==0.0
 wsgiref==0.1.2

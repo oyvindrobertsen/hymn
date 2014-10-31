@@ -1,17 +1,23 @@
 (import
-  [wsgiref.simple_server [make_server]]
-  [types [StringType]])
+  [wsgiref.simple-server [make-server]])
+
+(import
+  [hymnous.request [parse-request]]
+  [hymnous.response [get-response]])
+
 
 (defclass App
   []
   [[port 8080]
    [hostname "localhost"]
    [*debug* true]
-   [route {}]
+   [routes {}]
    [wsgi-callback (fn [self environ start-response]
-                      (start-response (.encode "200 OK" "utf-8") [])
-                      [(.encode "Wee" "utf-8")])]
+                      (let [[request (parse-request environ)]
+                            [response (get-response request self.routes)]]
+                        (start-response (.encode (.status response) "utf-8") (.headers response))
+                        [(.encode (.body response) "utf-8")]))]
    [run (fn [self]
-            (let [[httpd (make_server "localhost" self.port self.wsgi-callback)]]
+            (let [[httpd (make-server self.hostname self.port self.wsgi-callback)]]
               (apply print ["Serving on http://" self.hostname ":" self.port] {"sep" ""})
-              (.serve_forever httpd)))]])
+              (.serve-forever httpd)))]])
