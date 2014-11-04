@@ -1,7 +1,15 @@
+(import [wsgiref.util])
+
 (defclass Request
   []
-  [[__init__ (fn [self env]
-                 (print env))]])
+  [[--init-- (fn [self env]
+                 (setv self.env env)
+                 None)]
+   [query-string (fn [self]
+                     (try
+                       (parse-query-string (get self.env "QUERY_STRING"))
+                       (catch [e KeyError] {})))]
+   (request-uri (fn [self &optional [include-query true]] (wsgiref.util.request-uri self.env include-query)))])
 
 (defn parse-query-string
   [query-string]
