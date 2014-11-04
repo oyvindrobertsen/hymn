@@ -1,5 +1,7 @@
 # hymnous
 
+[![Build Status](http://ci.oyvindrobertsen.com/buildStatus/icon?job=hymnous)](http://ci.oyvindrobertsen.com/job/hymnous/)
+
 Web framework for the [hy](http://hylang.org) language.
 Conforms to WSGI standards.
 Written as a learning exercise and probably shouldn't be used for anything at all.
@@ -27,7 +29,6 @@ Written as a learning exercise and probably shouldn't be used for anything at al
 
 ## Todo
 
-* Set up properly for tests
 * Implement a proper router
 * Templates? Jinja2?
 * ORM?
