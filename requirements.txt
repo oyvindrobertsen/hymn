@@ -1,3 +1,3 @@
 hy==0.10.1
 wsgiref==0.1.2
--e git+git://github.com/kirbyfan64/hytest.git
+-e git+git://github.com/kirbyfan64/hytest.git#egg=hytest
