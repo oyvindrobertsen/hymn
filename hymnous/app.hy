@@ -15,6 +15,7 @@
    [wsgi-callback (fn [self environ start-response]
                       (let [[request (parse-request environ)]
                             [response (get-response request self.routes)]]
+                        (print request.env)
                         (start-response (.encode (.status response) "utf-8") (.headers response))
                         [(.encode (.body response) "utf-8")]))]
    [run (fn [self]
