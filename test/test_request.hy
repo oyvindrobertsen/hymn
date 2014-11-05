@@ -18,4 +18,4 @@
           (test == {"q" "123" "name" "test"} (.query-string req))
           (test == "http://127.0.0.1/test/path" (.request-uri req false))
           (test == "http://127.0.0.1/test/path?q=123&name=test" (.request-uri req true))
-          (test == "/test/path" (.path-info req false)))
+          (test == "/test/path" (.path-info req)))
