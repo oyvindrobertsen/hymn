@@ -1,8 +1,8 @@
 (require hytest)
 
 (import 
-  [hymnous.request [parse-query-string]]
-  [hymnous.request [parse-request]]
+  [hymn.request [parse-query-string]]
+  [hymn.request [parse-request]]
   [wsgiref.util [setup-testing-defaults]])
 
 (test-set parse-query-string-tests

@@ -22,5 +22,5 @@
 
 (defn parse-request
   [env]
-  ; Returns an Request instance, wrapping the env passed.
+  ; Returns a Request instance, wrapping the env passed.
   (Request env))

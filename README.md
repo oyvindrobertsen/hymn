@@ -1,6 +1,6 @@
-# hymnous
+# hymn
 
-[![Build Status](http://ci.oyvindrobertsen.com/buildStatus/icon?job=hymnous)](http://ci.oyvindrobertsen.com/job/hymnous/)
+[![Build Status](http://ci.oyvindrobertsen.com/buildStatus/icon?job=hymn)](http://ci.oyvindrobertsen.com/job/hymn/)
 
 Web framework for the [hy](http://hylang.org) language.
 Conforms to WSGI standards.
@@ -8,13 +8,15 @@ Written as a learning exercise and probably shouldn't be used for anything at al
 
 # Installation
 
-    $ pip install hymnous
+    $ pip install hymn
+
+Depends on hy.
 
 # Usage
 ```hy
 ; app.hy
 (import
-[hymnous.app [App]])
+[hymn.app [App]])
 
 (def app (App))
 

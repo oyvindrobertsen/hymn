@@ -1,5 +1,5 @@
 (import
-  [hymnous.app [App]])
+  [hymn.app [App]])
 
 (def app (App))
 

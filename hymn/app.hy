@@ -2,8 +2,8 @@
   [wsgiref.simple-server [make-server]])
 
 (import
-  [hymnous.request [parse-request]]
-  [hymnous.response [get-response]])
+  [hymn.request [parse-request]]
+  [hymn.response [get-response]])
 
 
 (defclass App
